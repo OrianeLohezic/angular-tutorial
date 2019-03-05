@@ -1,0 +1,16 @@
+<h1>HELLO !</h1>
+<div class="tweet-container">
+    <div *ngFor="let tweet of tweets" >
+      <div class="tweet-header">
+        <strong>{{ tweet.user }}</strong>
+        <small class="time"> - {{ tweet.created_at | timeAgo }}</small>
+      </div>
+      <div class="tweet-content">
+        {{ tweet.text }}
+      </div>
+      <i #heart (click)="onHeart(heart, tweet)" class="far fa-heart"></i>
+      <small>{{ tweet.favoriteCount }}</small>
+    </div>
+  <textarea #userInput></textarea><br>
+  <button (click)="onTweet(userInput)">Tweeter</button>
+</div>
