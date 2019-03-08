@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Tweet } from '../tweet';
+import { User } from '../user';
 
 @Component({
   selector: 'app-timeline',
